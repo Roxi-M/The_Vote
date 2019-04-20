@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/note?serverTimezone=UTC&SSL=false
+    username: root
+    password:
+    initialSize: 10
+    minIdle: 8
+    maxActive: 100
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall,slf4j
+    logSlowSql: true
+weixin:
+  redirect_back:
+    url: http://zmj86i.natappfree.cc/weChat/callback
+  base:
+   appid: wx3b835565c7f8edb1
+   appsecret: c0d24490107b35f6202d7695571bd0db
+   state: 123
